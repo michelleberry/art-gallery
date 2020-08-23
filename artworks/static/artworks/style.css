@@ -1,0 +1,8 @@
+body {
+    background: rgb(243, 245, 244) /*url('eye.png')*/;
+    padding: 10;
+}
+
+.jumbotron {
+    background: none;             /* Transparent background */
+}

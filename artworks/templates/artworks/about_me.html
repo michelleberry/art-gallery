@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Online Art Gallery</title>
+  </head>
+  <body>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About the Artist</li>
+      </ol>
+    </nav>
+
+    <ul>
+      <h1>About The Artist</h1>
+      <p class="lead">
+      Michelle Berry was born in Ontario, Canada in 2001. <br> 
+      She began teaching herself to draw portraits out of boredom in 2017. While learning to draw, she would observe photographs as <br> 
+      references for her art. Since then, the face and portraiture has always been her main focus, however she has been working <br> 
+      towards abandoning references in favour of a more personal and cartoonish style that she feels is more creative. <br> 
+      <br>
+      In 2019, while studying Computer Science at the University of Guelph, Michelle initally hoped to complete a minor in studio arts. <br> 
+      Unfortunately, the heavy time commitment to studio art classes discouraged her, as her compulsory courses were already taking <br> 
+      a large chunk of her time. Even so, Michelle has continued to dedicate her spare time to producing drawings and sketches. <br> 
+      Most recently, she has made a foray into producing digital artworks with the aid of a drawing tablet. <br>
+      <br>
+      In an ideal future, Michelle would  blend her interests of studio art and computer science into a career. <br> 
+      Recently she has programmed a small ice fishing game using processing that features her own original artwork as graphics.
+      </p>
+      <img src="{% static 'img/myRoom.jpg' %}" alt="" width="30%">
+      <br>
+      <br>
+      <h5>Contact Information:</h5>
+      <p class="lead"> Michelle can be reached by email at mberry05@uoguelph.ca.</p>
+
+    </ul>
+    
+    
+    
+  </body>
+{% endblock %}

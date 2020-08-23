@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'artworks/style.css' %}">
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Online Art Gallery</title>
+</head>
+
+<body>
+  <div>
+    <br>
+    <ul>
+      <h1 class="display-4"> <b>Welcome to Michelle's Online Art Gallery!</b></h1>
+      <p class="lead"><b>This is my website gallery where I showcase paintings and drawings I produced in the past three
+        years. I hope that you enjoy.</b> </p>
+      <hr class="my-4">
+      <p class="lead">Select a year to view artworks from that time period.</p>
+      {% if collection_list %}
+      <ul>
+        {% for collection in collection_list %}
+        <a class="btn btn-outline-secondary" href="{% url 'collection_index' collection.id %}"
+          role="button">{{ collection.title }}</a>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No collections are available.</p>
+      {% endif %}
+      <br>
+      <a class="btn btn-default" href="{% url 'about_me' %}">Learn more about the artist » </a>
+    </ul>
+    <div>
+      <img src="{% static 'img/banner_new.png' %}" alt="" width="100%">
+    </div>
+  </div>
+</body>
+
+</html>
+{% endblock %}
+
